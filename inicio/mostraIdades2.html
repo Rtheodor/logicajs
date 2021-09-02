@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //esta função mostra uma frase no navegador e pula uma linnha
+        var pulaLinha = function(){
+            document.write("<br><hr><br>");
+        };
+
+        var mostra = function(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        // agora vamos colocar no navegador o ano em que nasci:
+        var ano = 2020;
+        mostra("Eu nasci em :" + (ano - 32));
+        mostra("Isis nasceu em :" + (ano - 5));
+        mostra("Flora nasceu em :" + (ano - 2));
+        console.log("Apenas um console no log");
+    </script>
+</body>
+</html>

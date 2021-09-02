@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h3>Álcool ou Gasolina</h3>
+    
+</body>
+<script>
+    var tanqueCheio = 40;
+    
+    var caminhoComGasolina = 480;
+    var consumoDeGasolina = caminhoComGasolina / tanqueCheio;
+    
+    var caminhoComAlcool = 300;
+    var consumoDeAlcool = caminhoComAlcool / tanqueCheio;
+    var pulaLinha = function(){
+        document.write("<hr>")
+    }; 
+
+    document.write("O carro consome: "+ consumoDeGasolina + " litros de gasolina por KM" );
+    pulaLinha();
+    pulaLinha();
+    document.write(" O carro consome: " + Math.round(consumoDeAlcool) + " Litros de Alcool por KM");
+    pulaLinha();
+
+
+    var precoDaGasolina = 2.90;
+    var precoDoAlcool = 2.40;
+
+
+    var precoPorKilometroG = consumoDeGasolina / precoDaGasolina;
+    var precoPorKilometroA = consumoDeAlcool / precoDoAlcool;
+
+    pulaLinha(); 
+    document.write("Preço por kilometro de gasolina é :" + Math.round(precoPorKilometroG));
+    pulaLinha();
+    pulaLinha();
+    document.write("Preço por kilometro de Alcool é: " + Math.round(precoPorKilometroA));
+    pulaLinha();
+    pulaLinha();  
+    document.write("O Menor preço é: " + Math.round(precoPorKilometroA));
+</script>
+</html>
