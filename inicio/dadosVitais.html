@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var calculaDiasDeVida = function (idade) {
+            var dias = idade * 365;
+            return dias;
+        }
+
+        var idade = prompt("Qual sua idade? ");
+        document.write("Dias vividos  " + calculaDiasDeVida(idade));
+
+        var calculaBatimentos = function (dias) {
+            var calculaDiasDeVida = dias * 24 * 60 * 80;
+            return calculaDiasDeVida;
+        }
+                
+        /*var dias = calculaDiasDeVida(idade);
+        var batimentos = calculaBatimentos(dias);
+        document.write("Seu coração já bateu " + batimentos
+            + " vezes.");*/
+
+        var batimentos = calculaDiasDeVida(idade);
+        document.write("Seu coração já bateu " + calculaBatimentos(batimentos)
+            + " vezes.");
+
+     </script>
+</body>
+
+</html>
