@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Document</title>
+</head>
+<body>
+    <script>
+    //esta função mostra uma frase no navegador e pula uma linnha
+    
+    var pulaLinha = function () {
+        document.write("<br><hr><br>");
+    };
+
+    var mostra = function (frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    var calculaPontos = function(vitorias, empates){
+        return (vitorias * 3 ) + empates;
+    };
+        
+    var vitorias = prompt("Quantos jogos o CDC venceu? ");
+    var empates = prompt("Quantos empates ? ");
+    
+    if( pontos > 28){
+        mostra("Nossa equipe esta indo melhor que os adversários ")
+    }
+
+    if( pontos < 28){
+        mostra("Nossa equipe esta indo pior que os adversários ")
+    }
+
+    if( pontos == 28){
+        mostra("Nossa equipe esta empatada com os adversários ")
+    }
+
+    mostra("Nosso equipe tem " + calculaPontos + " pontos!");
+
+    
+    var vitorias = prompt("Quantas vitorias o adversário tem? ");
+    var empates = prompt("E quantos empates o adversário tem ? ");
+    
+    mostra("Total de pontos  " + calculaPontos + " do adversário " );
+
+    
+    
+    </script>
+
+</body>
+</html>
