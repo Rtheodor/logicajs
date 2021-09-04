@@ -17,35 +17,43 @@
         pulaLinha();
     }
     
-    var calculaPontos = function(vitorias, empates){
-        return (vitorias * 3 ) + empates;
+    var calculaPontos = function(vitorias, empates, derrotas){
+        return (vitorias * 3 ) + parseInt(empates) - parseInt(derrotas);
+        console.log(vitorias, empates, derrotas)
     };
         
     var vitorias = prompt("Quantos jogos o CDC venceu? ");
-    var empates = prompt("Quantos empates ? ");
+    var empates = prompt("Quantos jogos o CDC empatou ? ");
+    var derrotas = prompt("Quantas derrotas o CDC teve ?")
+    var pontos = calculaPontos(vitorias, empates, derrotas);
     
-    if( pontos > 28){
+    
+    mostra("Nosso equipe tem " + pontos + " pontos!");
+    
+    var calculaPontosAdversario = function(vitoriasDoAdversario, empatesDoAdversario, derrotaDoAdversario){
+        return (vitoriasDoAdversario * 3) + parseInt(empatesDoAdversario) - parseInt(derrotaDoAdversario);
+    };
+
+    var vitoriasDoAdversario = prompt("Quantas vitorias o time adversário tem? ");
+    var empatesDoAdversario = prompt("Quantos empates o adversário tem ?");
+    var derrotaDoAdversario = prompt("Quantidade de derrotas são: ");
+    var pontosAdversario = calculaPontosAdversario(vitoriasDoAdversario, empatesDoAdversario, derrotaDoAdversario);
+
+    mostra("Os adversários possuem o total de " + pontosAdversario + "pontos");
+
+    if( pontos > pontosAdversario){
         mostra("Nossa equipe esta indo melhor que os adversários ")
     }
 
-    if( pontos < 28){
+    if( pontos < pontosAdversario){
         mostra("Nossa equipe esta indo pior que os adversários ")
     }
 
-    if( pontos == 28){
+    if( pontos == pontosAdversario){
         mostra("Nossa equipe esta empatada com os adversários ")
     }
+    
 
-    mostra("Nosso equipe tem " + calculaPontos + " pontos!");
-
-    
-    var vitorias = prompt("Quantas vitorias o adversário tem? ");
-    var empates = prompt("E quantos empates o adversário tem ? ");
-    
-    mostra("Total de pontos  " + calculaPontos + " do adversário " );
-
-    
-    
     </script>
 
 </body>
