@@ -24,20 +24,32 @@
         }
 
         var nomeDoUsuario = prompt("Qual o seu nome ? ");
-        mostra(document.write("Bom Dia  " + nomeDoUsuario));
-        
-        var alturaDoUsuario =  prompt("Olá! " + nomeDoUsuario + "  Qual sua altura? ");
-        mostra(document.write("Sua altura é: " + alturaDoUsuario));
-        
-        var pesoDoUsuario  = prompt(nomeDoUsuario + " agora digite seu peso ?");
-        mostra(document.write( " Você pesa: " + pesoDoUsuario));
-        
-        var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
-        mostra(document.write("Seu IMC é: " + Math.round(imcDoUsuario)));
+        pulaLinha(document.write("Bom Dia  " + nomeDoUsuario));
 
-      /*mostra(" Meu IMC é: " + calculaIMC(alturaDoUsuario, pesoDoUsuario));
-        mostra("Ainda estou :" + Math.round(calculaIMC(alturaDoUsuario, pesoDoUsuario) - 18.5) + "pontos acima do limite de magreza. ");
-        mostra("Ainda estou :" + Math.round(calculaIMC(alturaDoUsuario, pesoDoUsuario) - 35) + "pontos abaixo da obesidade");*/
+        var alturaDoUsuario = prompt("Olá! " + nomeDoUsuario + "  Qual sua altura? ");
+        pulaLinha(document.write("Sua altura é: " + alturaDoUsuario));
+
+        var pesoDoUsuario = prompt(nomeDoUsuario + " agora digite seu peso ?");
+        pulaLinha(document.write(" Você pesa: " + pesoDoUsuario));
+
+        var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+        pulaLinha(document.write("Seu IMC é: " + Math.round(imcDoUsuario)));
+
+
+        if (imcDoUsuario > 18.5) {
+            mostra(document.write("Ainda estou acima do limite de magreza. "));
+        }
+
+        if (imcDoUsuario < 35) {
+            mostra(document.write("Ainda estou abaixo da obesidade"));
+        }
+        if (imcDoUsuario >= 18.5 && imcDoUsuario <= 35) {
+            
+                mostra("OK! Seu IMC está entre os dois limites.");
+            
+        }
+
+
 
 
     </script>
