@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>AcertaAE</title>
+</head>
+<body>
+    <script>
+
+        var pulaLinha = function(){
+            document.wirte ("<br/><hr/><br/>");
+        }
+
+        var mostra = function(){
+            document.wirte ();
+            pulaLinha();
+        }
+
+
+        var numeroPensado = Math.round(Math.random() * 10);
+        var chute = prompt("Já pensei, Qual você acha que é ? ");
+        if(chute == numeroPensado){
+            pulaLinha(document.write("Uaua! Você acertou, pois eu pensei no  " + numeroPensado));
+        }else{
+            pulaLinha(document.write("Você errou! Eu tinha pensado no " + numeroPensado));
+        }
+        
+            
+         
+    </script>
+</body>
+</html>
