@@ -17,11 +17,21 @@
             pulaLinha();
         }
 
+        var sorteio = function(){
+            var numeroPensado = Math.round(Math.random() * 10);
+            return numeroPensado;
+        }
 
-        var numeroPensado = Math.round(Math.random() * 10);
+        var numeroPensado = sorteio();
         var chute = prompt("Já pensei, Qual você acha que é ? ");
         if(chute == numeroPensado){
-            pulaLinha(document.write("Uaua! Você acertou, pois eu pensei no  " + numeroPensado));
+            pulaLinha(document.write("Uaua! Você acertou, pensei no  " + numeroPensado));
+        }if(chute > numeroPensado){
+            pulaLinha(document.write("Seu chute foi alto ! "));
+        }if(chute < numeroPensado){
+            pulaLinha(document.write("Seu chute foi baixo ! "));
+        }if(isNaN(chute)){
+            pulaLinha(document.write("Apenas numeros são validos !"));
         }else{
             pulaLinha(document.write("Você errou! Eu tinha pensado no " + numeroPensado));
         }
