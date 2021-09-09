@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tabuadas</title>
+</head>
+
+<body>
+    <script>
+        
+        var mostra = function (frase) {
+            document.write(frase + "<br>");
+        }
+        
+        var multiplicador = 1;
+        var numeroInformado = prompt("Qual a tabuada deseja saber ?");
+        while (multiplicador <= 10) {
+            mostra(numeroInformado + " vezes " + multiplicador + " é igual a " + numeroInformado * multiplicador);
+            multiplicador = multiplicador + 1;
+        }
+
+
+/*
+        var mostra = function (frase) {
+            document.write(frase + "<br>");
+        };
+        var multiplicador = 1;
+        while (multiplicador <= 10) {
+            mostra(7 * multiplicador);
+            multiplicador = multiplicador + 1;
+        }
+
+*/
+    </script>
+</body>
+
+</html>
