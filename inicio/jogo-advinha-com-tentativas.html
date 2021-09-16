@@ -11,17 +11,24 @@
         
         var numeroDaTentativa = 1;
         
-        while (numeroDaTentativa <= 3){
-            var chute = prompt("Qual você acha que é?");
+        while (numeroDaTentativa = numeroPensado){
+            var chute = prompt("Qual numero eu pensei? ");
 
             if(chute == numeroPensado){
                 alert(" Parabéns acertou! ");
-                break;
+                break
             }if(isNaN(chute)){
-            alert("Apenas numeros são validos !");
+                alert("Apenas numeros são validos !");
             }else{
-                alert("Você errou. Será que ainda tem mais tentativas?");
+                if(chute < numeroPensado){
+                    alert("seu chute foi baixo.");
+                    
+                }if(chute > numeroPensado){
+                    alert("Seu chute foi alto. ");
+                }
+                                
             }
+            
                 numeroDaTentativa ++;
         }
     </script>
