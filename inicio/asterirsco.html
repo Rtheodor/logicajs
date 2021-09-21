@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Loop dentro de outro.</title>
+</head>
+
+<body>
+    <script>
+        var tamanho = linha + coluna;
+        var tamanho = prompt("Qual o tamnho do guadrado ?");
+
+        for (var linha = 0; linha < tamanho; linha = linha + 1) {
+            for (var coluna = 0; coluna < tamanho; coluna = coluna + 1) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>
