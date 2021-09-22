@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha mais</title>
+</head>
+<body>
+    <input type="text" id="numero" />
+    <input type="submit" id="adivinha" value="Compare com o meu segredo! " />
+    <script>
+        var caixaDoNumero = document.getElementById("numero");
+            
+        var segredo = Math.random();
+
+        var botaClicado = function(){
+            if(segredo == caixaDoNumero){
+                alert("Parabéns! Você acertou o número secreto uhuuuuuuuuuuuuuuu")
+            }
+            else{
+                alert("Errou tente novamente.")
+            }
+            caixaDoNumero.value="";
+        }
+
+        var botaoAdivinha = document.getElementById("adivinha");
+        botaoAdivinha.onclick = botaClicado;
+        
+    </script>
+</body>
+</html>
